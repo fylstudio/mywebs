@@ -59,8 +59,11 @@
                 风云龙工作室
             </span>
         </div>
-
+        
         <article>
+
+            <h2>第一部分：HTML5</h2>
+
             <section>
                 <h3>1、HTML 5简介</h3>
                 <p>HTML（Hyper Text Markup Language ）即超文本标记语言，该语言使用一套标记（标签）来描述网页中的文字、图片、声音、动画、视频、表格、链接等，是制作网页的基础语言。
@@ -771,14 +774,102 @@
                     <a href="formexample.html" target="_blank" title="表单示例">【示例】：表单</a>
                 </aside>
             </section>
+
+            <h2>第二部分：CSS3</h2>
+
+            <section>
+                    <h3>1、CSS的使用方式</h3>
+                    <ol>
+                        <li>行内样式表</li>
+                        <li>内部样式表</li>
+                        <li>外部样式表（import）</li>
+                        <li>外部样式表（link）</li>
+                    </ol>
+            </section>
+            <hr>
+            
+            <section>
+                <h3>2、CSS的基本语法规则</h3>
+                <ul>
+                    <li>结构
+                        <ul>
+                            <li>selector{declaration-block;}</li>
+                            <li>selector-group{declaration-block;}</li>
+                        </ul>
+                    </li>
+                    <li>注释：/* comment  */</li>
+                    <li>CSS选择器组中，有一个选择器语法出错，则全部无效。
+                    </li>
+                </ul>
+            </section>
             <hr>
 
             <section>
-                <h3>23、CSS</h3>
-                <p></p>
-                <aside></aside>
+                <h3>2、CSS的选择器</h3>
+                    <ol>
+                        <li>简单选择器（TYPE、ID、CLASS选择器）
+                            <ol>
+                                <li>类型选择器</li>
+                                <li>ID选择器</li>
+                                <li>CLASS选择器</li>
+                            </ol>
+                        </li>
+                        <li>属性选择器
+                            <ol>
+                                <li>[attribute]:用于选取带有指定属性的元素。</li>
+                                <li>[attribute=value]:用于选取带有指定属性和值的元素。</li>
+                                <li>[attribute~=value]:用于选取属性值中包含指定词汇的元素。</li>
+                                <li>[attribute|=value]:用于选取带有以指定值开头的属性值的元素,该值必须是整个单词，比如 lang="en"，或者后面跟着连字符，比如 lang="en-us"</li>
+                                <li>[attribute^=value]:匹配属性值以指定值开头的每个元素。</li>
+                                <li>[attribute$=value]:匹配属性值以指定值结尾的每个元素。</li>
+                                <li>[attribute*=value]:匹配属性值中包含指定值的每个元素。</li>
+                            </ol>
+                        </li>
+                        <li>上下文选择器
+                            <ol>
+                                <li>e1 e2 ：e1的后代元素</li>
+                                <li>e1>e2：e1的儿子</li>
+                                <li>e1~e2：兄弟</li>
+                                <li>e1+e2：紧邻兄弟</li>
+                                <li>*：匹配任何一个元素</li>
+                            </ol>
+                        </li>
+                        <li>伪类选择器
+                            <ol>
+                                <li>结构化的伪类选择器
+                                    <ol>
+                                        <li>e:first-child</li>
+                                        <li>e:last-child</li>
+                                        <li>e:nth-child(n)</li>
+                                        <li>table tbody tr:nth-child(2n+1)</li>
+                                    </ol>    
+                                </li>
+                                <li>UI伪类选择器
+                                    <ol>
+                                        <li>a:visited</li>
+                                        <li>a:link</li>
+                                        <li>e:hover</li>
+                                        <li>e:focus</li>
+                                        <li>e:checked</li>
+                                        <li>e:active(鼠标按下被释放)</li>
+                                        <li>e:target</li>
+                                    </ol>    
+                                </li>
+                            </ol>
+                        </li>
+                        <li>伪元素选择器
+                            <ol>
+                                <li>e::first-letter</li>
+                                <li>e::first-line</li>
+                                <li>e::before{content:“==”}</li>
+                                <li>e::after</li>
+                            </ol>
+                        </li>
+                    </ol>
             </section>
             <hr>
+
+            <h2>第三部分：JavaScript</h2>
 
             <section>
                     <h3>24、JavaScript</h3>

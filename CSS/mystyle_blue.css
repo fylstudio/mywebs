@@ -77,6 +77,13 @@ article{
     border:1px solid #556dbd;    
     padding:10px;
 }
+h2{
+    text-align:center;
+    background-color:#571ef5;
+    color:#FFFFFF;
+    margin:0px;
+    line-height:45px;
+}
 
 p{
     text-indent:2em;
