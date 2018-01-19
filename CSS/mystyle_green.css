@@ -1,0 +1,170 @@
+body{
+    background-color:#999999;   
+    font-family:Tahoma,Arial,"微软雅黑",sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+#main article section aside a{
+    color:#55b929;
+    text-decoration:none;     
+}
+
+#main article section aside a:hover{
+    color:#FF0000;
+}
+
+footer a{
+    color:#cccccc;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#ff0000;
+}
+
+header{
+    width:100%;
+    height:50px;
+    background-color: #2e323e;
+    margin:0px;
+    padding:0px;
+}
+#header_content{
+    width:1024px;
+    height:100%;
+    margin:0px auto;
+    color:#FFFFFF;
+    line-height:50px;
+}
+#header_content_left{
+    width:500px;
+    float:left;
+    padding-left:5px;
+}
+#header_content_right{
+    width:500px;
+    text-align:right;
+    float:right;   
+    padding-right:5px;
+}
+#main{
+    width:1024px;
+    margin:0px auto;
+}
+#logo{
+    height:100px;
+}
+#logo_left{
+    width:400px;
+    height:100%;
+    text-align:right;
+    padding-top:10px;
+    float:left;
+}
+#logo_right{
+    width:600px;
+    height:100%;
+    float:right;
+    color:#FFFFFF;
+    font-size:35px;
+    line-height:100px;
+    text-shadow:5px 5px 3px #000000;
+}
+#img_circle{
+    border-radius:40px;
+}
+article{
+    background-color:#FFFFFF;
+    border:1px solid #96f0a5;    
+    padding:10px;
+}
+
+p{
+    text-indent:2em;
+}
+
+aside{
+    text-align:right;
+}
+
+footer{
+    width:100%;
+    height:80px;
+    margin-top:10px;
+    padding-top:20px;
+    background-color: #333333;
+    color: #cccccc;
+    text-align:center;
+}
+.shili{
+    width:780px;
+    margin:0px auto;
+    background-color: #98c983;
+    padding:10px;
+}
+.shili a{
+    color:#26630c;
+    text-decoration:none;
+}
+.shili a:hover{
+    color:rgb(238, 11, 11);
+}
+hr{
+    height:1px;
+    border:none;
+    border-top:1px solid rgb(31, 187, 44);
+}
+table{
+    border:2px solid #000000;
+    border-collapse:collapse;
+    margin:0px auto;
+}
+table caption{
+    font:1.5em/1.5 Microsoft Yahei;
+}
+table tr:nth-child(even){
+    background-color:#ced1cb;
+}
+table tr:nth-child(odd){
+    background-color:#93f5a3;
+}
+table tr th{
+    border:1px solid #666666;
+    padding:10px;
+}
+table tr td{
+    border:1px solid #666666;
+    padding:10px;
+}
+#float_left{
+    width:100px;
+    position:fixed;
+    top:35%;
+    right:3px;
+}
+#float_left ul{
+    margin:0px;
+    padding:0px;
+}
+#float_left ul li{
+    list-style:none;
+    height:35px;
+    font:0.9em/1 Tahoma,Arial,Microsoft Yahei,sans-serif;
+    color:#FFFFFF;
+    text-align:center;
+    line-height:35px;
+    background-color:rgb(27, 138, 42);
+    border-bottom: 1px solid rgb(113, 189, 120);
+    margin-top:1px;
+}
+#float_left ul li:hover{
+    background-color:rgb(45, 233, 55);
+}
+#float_left ul li a{
+    color:#FFFFFF;
+    text-decoration:none;
+}
+#float_left ul li a:hover{
+    color:#0e6319;
+}

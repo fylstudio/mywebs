@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>按钮样式的超链接</title>
+    <style type="text/css">
+        article{
+            width:800px;
+            margin:auto;
+            padding:20px;
+            background-color:#EEEEEE;
+            text-align:center;
+        }
+        a{
+            font:1em/1 Tahoma,Arial,Microsoft Yahei,sans-serif;
+            text-align:center;
+            margin:5px;
+            padding:8px 15px;
+            color:#000000;
+            text-decoration:none;
+        }
+        a:link,a:visited{				/* 超链接正常状态、被访问过的样式 */
+            background-color: #ddd;
+            border-top: 1px solid #eee;		/* 边框实现阴影效果 */
+            border-left: 1px solid #eee;
+            border-bottom: 1px solid #717171;
+            border-right: 1px solid #717171;
+        }
+        a:hover{		
+            background-color:#ccc;			/* 改变背景色 */
+            border-top: 1px solid #717171;	/* 边框变换，实现“按下去”的效果 */
+            border-left: 1px solid #717171;
+            border-bottom: 1px solid #eee;
+            border-right: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <h1>按钮样式的超链接</h1>
+    <a href="#">按钮链接</a>
+    <a href="#">按钮链接</a>
+    <a href="#">按钮链接</a>
+    <a href="#">按钮链接</a>
+    <a href="#">按钮链接</a>
+    <a href="#">按钮链接</a>
+</article>
+</body>
+</html>

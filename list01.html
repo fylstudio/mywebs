@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>带隐藏功能的列表</title>
+    <style>
+        section{
+            width:800px;
+            background-color:rgb(125, 182, 163);
+            margin:auto;
+            padding:20px;
+            font-family:"微软雅黑";
+            font-size:1.5em;
+        }
+        ul li ul{
+            display:none;
+        }
+        ul li:hover ul{
+            cursor:pointer;
+            display:block;
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+            <ul>
+                    <li>
+                        第一级列表1
+                        <ul>
+                            <li>第二级列表1</li>
+                            <li>第二级列表2</li>
+                            <li>第二级列表3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        第一级列表2
+                        <ul>
+                            <li>第二级列表1</li>
+                            <li>第二级列表2</li>
+                            <li>第二级列表3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        第一级列表3
+                        <ul>
+                            <li>第二级列表1</li>
+                            <li>第二级列表2</li>
+                            <li>第二级列表3</li>
+                        </ul>
+                    </li>
+                    <li>
+                        第一级列表4
+                        <ul>
+                            <li>第二级列表1</li>
+                            <li>第二级列表2</li>
+                            <li>第二级列表3</li>
+                        </ul>
+                    </li>
+                </ul>
+    </section>
+</body>
+</html>

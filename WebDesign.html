@@ -1,0 +1,826 @@
+<!--1.这表示一个HTML的注释-->
+
+<!--2.放在HTML文档的第一行，标记文档类型。-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--28.提供有关页面的元信息--> 
+    <meta charset="UTF-8">
+    <!-- 针对移动网页进行页面优化 -->
+    <meta name="viewport" content="width=1024,initial-scale=1.0,minimum-scale=1.0,maximum-scale=2.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
+    <meta name="format-detection" content="telephone=no"> 
+    <meta name="keywords" content="这里用来描述网页的关键词">
+    <meta name="description" content="这里用来描述网页的主要内容">
+    <meta name="author" content="这里用来描述网页的作者信息">
+    <meta name="generator" content="这里用来描述网页的开发工具"> 
+    <meta name="revised" content="这里用来描述网页的版本">  
+    <!-- <meta http-equiv="refresh" content="30">  -->
+    <!-- <meta http-equiv="Refresh" content="5;url=http://www.fylstudio.com"> -->
+
+    <!--45.<title> 标签定义文档的标题。-->
+    <title>网页设计-风云龙工作室</title>
+
+    <!--8.为页面上的所有链接规定默认地址或默认目标-->
+    <!-- <base href="http://www.fylstudio.com" target="_blank">  -->
+
+    <link rel="stylesheet" href="css/mystyle_green.css" type="text/css" id="changecss">
+    <link rel="shortcut icon" type="image/x-icon" href="images/dragon_icon.ico" media="screen">
+    <link rel="stylesheet" href="" type="text/css" media="print">
+    <script type="text/javascript" src="js/myjs.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header_content">
+            <span id="header_content_left">
+                欢迎您光临：风云龙工作室-FYLSTUDIO
+            </span>
+            <span id="header_content_right"></span>
+        </div>
+    </header>
+
+    <div id="float_left">
+        <ul>
+            <li><div><a href="#top">TOP</a></div></li>
+            <li><div><a href="javascript:changestylegreen();">STYLE_GREEN</a></div></li>
+            <li><div><a href="http://www.fylstudio.com" target="_blank">FYLSTUDIO</a></div></li>
+            <li><div><a href="javascript:changestyleblue();">STYLE_BLUE</a></div></li>
+            <li><div><a href="#this_bottom">BOTTOM</a></div></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <div id="logo">
+            <span id="logo_left">
+                <a href="http://www.fylstudio.com" target="_blank"><img id="img_circle" src="images/dragon_small.jpg"/ alt="fylstudio's logo" title="www.fylstudio.com"></a>
+            </span>
+            <span id="logo_right">
+                风云龙工作室
+            </span>
+        </div>
+
+        <article>
+            <section>
+                <h3>1、HTML 5简介</h3>
+                <p>HTML（Hyper Text Markup Language ）即超文本标记语言，该语言使用一套标记（标签）来描述网页中的文字、图片、声音、动画、视频、表格、链接等，是制作网页的基础语言。
+                </p>
+                <p>HTML 5是2014年新发布的版本，它取代了1999年所制定HTML 4.01和XHTML 1.0标准，简称H5。该版本仍处于发展阶段，但大部分浏览器已经支持某些 HTML5 技术。广义而论，HTML 5实际指的是包括HTML、CSS和JavaScript在内的一套技术组合。
+                </p>
+            </section>
+            <hr>
+
+            <section>
+                <h3>2、HTML 5的新增功能</h3>
+                <ol>
+                    <li>新增语义化标签，使文档结构明确</li>
+                    <li>新的文档对象模型（DOM）</li>
+                    <li>实现2D绘图的Canvas对象</li>
+                    <li>可控媒体播放</li>
+                    <li>离线存贮</li>
+                    <li>文档编辑</li>
+                    <li>拖放</li>
+                    <li>跨文档消息</li>
+                    <li>浏览器历史管理</li>
+                    <li>MIME类型和协议管理</li>
+                </ol>
+            </section>
+            <hr>
+
+            <section>
+                <h3>3、HTML 5的基本结构</h3>
+                <div class="shili">
+                    <textarea rows="10" cols="80">
+                        <!DOCTYPE html>
+                        <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <title>Title</title>
+                            </head>
+                            <body>
+
+                            </body>
+                        </html>
+                    </textarea>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>4、新增的主体结构元素</h3>
+                <ol>
+                    <li>article：代表文档、页面或应用程序中独立的、完整的、可以独自被外部引用的内容。一篇博客或者报刊中的文章，一篇论坛帖子、一段用户评论或独立的插件，或其它任何独立的内容。</li>
+                    <li>section：用于对网站或应用程序中页面上的内容进行分块。一个section元素通常由内容及其标题组成。通常不推荐没有标题内容使用section元素。</li>
+                    <li>aside：用来表示当前页面或文章的附属信息部分，它可以包含与当前页面或主要内容相关的应用、侧边栏、广告、导航条，以及其它类似的有区别于主要内容的部分。</li>
+                    <li>nav：是一个可以用作页面导航的链接组，并不是所有的链接组都要被放进nav元素，只需要将主要的、基本的链接组放进nav元素即可。nav元素应用场景：传统导航条、侧边栏导航、页内导航、翻页操作等。</li>
+                    <li>time：该元素能够以机器可读的方式对日期和时间进行编码，搜索引擎也能够生成更智能的搜索结果。time标签目前不会在任何浏览器中呈现出特殊效果。</li>
+                </ol>
+                <div class="shili">
+                    <p>我们在每天早上<time>8:00</time> 开始营业。</p>
+                    <p>我在<time datetime="2010-02-14" pubdate="true">情人节</time>有个约会。</p>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>5、新增的非主体结构元素</h3>
+                <ol>
+                    <li> header：是一种具有引导作用的结构元素，通常用来放置整个页面或页面内的一个内容区块的标题，但是也可以包含其它内容，例如数据表格、搜索表单或相关的logo图片等。</li>
+                    <li>hgroup：将标题及其子标题进行分组的元素。</li>
+                    <li>footer：可以作为其父级内容区块或是一个区块的脚注。footer通常包括该区块的脚注信息，如作者、相关阅读链接及版权信息等。</li>
+                    <li>figure：规定独立的流内容（图像、图表、照片、代码等），虽然与主内容相关，但是如果被删除，则不应对文档流产生影响。</li>
+                    <li> address：用来在文档中呈现联系信息，如文档作者、文档维护者的名字、网站链接、电子邮箱、地址、电话号码等，<mark>大部分浏览器会以斜体的形式呈现。</mark></li>
+                </ol>
+                <div class="shili">
+                    <figure>
+                        <img src="images/dragon_small.jpg"/>
+                        <figcaption>
+                            风云龙工作室
+                        </figcaption>
+                    </figure>
+                    <address>
+                        通信地址：甘肃省兰州市安宁区兰州城市学院（培黎校区）电子与信息工程学院（730070）。
+                    </address>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>6、新增的其它元素</h3>
+                <ol>
+                    <li>video：定义视频，像电影片段或其它视频流。</li>
+                    <div class="shili">
+                        <video src="images/dayu.mp4"  controls="controls" width="450" height="225">您目前的浏览器不持！</video>
+                    </div>
+                    <li>audio：定义音频，如音乐或其它音频流。</li>
+                    <div class="shili">
+                        <audio src="images/liangliang.mp3" controls="controls">您目前的浏览器不支持！</audio>
+                    </div>
+                    <li>mark：</li>
+                    <div class="shili">
+                        <p><mark>用来在视觉上向用户呈现哪些需要突出显示或高亮显示的文字，与作者本意无关。</mark></p>
+                        <p><strong>与其相关的还有strong标签，是作者自己的想法。</strong></p>
+                        <p><em>与其相关的还有em标签，是作者自己的想法。</em></p>
+                    </div>
+                    <li>ruby rt rp：ruby 注释（中文注音或字符）。ruby 元素由一个或多个字符和一个提供解释/发音信息的 rt 元素组成，还包括可选的 rp 元素，用来定义当浏览器不支持 "ruby" 元素时显示的内容。 </li>
+                    <div class="shili">
+                        <p><ruby>中国<rt>china</rt></ruby></p>
+                        <p><ruby>中国<rt><rp>(</rp>china<rp>)</rp></rt></ruby></p>
+                    </div>
+                    <li>progress：表示运行中的进程，可以显示JavaScript中耗时类函数的进程，如等待中……、请稍后等。</li>
+                    <div class="shili">
+                        <p><progress min="1" max="10" value="0" id="pro"></progress></p>
+                    </div>
+                    <li>datalist：定义选项列表，与 input 配合使用来定义 input 可能的值。datalist 及其选项不会被显示出来，它仅仅是合法的输入值列表。使用 input 元素的 list 属性来绑定 datalist。 </li>
+                    <div class="shili">
+                        <form>
+                            <fieldset>
+                                <legend>请选择您的专业</legend>
+                                <input type="text"  list="prolist">
+                                <datalist id="prolist">
+                                    <option value="计算机科学与技术"></option>
+                                    <option value="软件工程"></option>
+                                    <option value="网络工程"></option>
+                                    <option value="数字媒体技术"></option>
+                                    <option value="信息网络安全"></option>
+                                </datalist>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <li>details和summary：用于描述文档或文档某个部分的细节。可与 summary 标签配合使用，summary可以为details 定义标题。标题是可见的，用户点击标题时，会显示出 details。summary应该是details的第一个子元素。</li>
+                    <div class="shili">
+                        <details>
+                            <summary>HTML</summary>
+                            Hyper Text Markup Language，即超文本标记语言。
+                        </details>
+                    </div>
+                    <li>embed：用来嵌入内容(包括各种媒体)，格式可以是midi、wav、AIFF、AU、MP3、Flash等。</li>
+                    <li>wbr：表示软换行。与&lt;br&gt;元素的区别：&lt;br&gt;元素表示此处必须换行，&lt;wbr&gt;表示浏览器窗口或父级元素足够宽时不换行，而宽度不够时主动在此处换行。</li>
+                    <li>canvas：定义图形，比如图表或其它图像。只是一个图形容器（画布），必须配合脚本实现绘制图形。</li>
+                    <div class="shili">
+                        <canvas id="myCanvas" width="600px" height="200px">您目前所使用的浏览器不支持！</canvas>
+                        <script type="text/javascript">
+                            var canvas=document.getElementById('myCanvas');
+                            var ctx=canvas.getContext('2d');
+                            // 画一个矩形
+                            ctx.fillStyle='#FF0000';
+                            ctx.fillRect(10,10,100,80);
+                            // 画一个矩形框
+                            ctx.lineWidth="3";
+                            ctx.strokeStyle="#00FF00";
+                            ctx.strokeRect(150,10,100,80);
+                            // 画一个不封闭多边形
+                            ctx.strokeStyle="#00EEFF";
+                            ctx.lineWidth="5";
+                            ctx.moveTo(350,10);
+                            ctx.lineTo(300,80);
+                            ctx.lineTo(400,80);
+                            ctx.stroke();
+                            // 画一个封闭多边形
+                            ctx.strokeStyle="#FFEE00";
+                            ctx.beginPath();
+                            ctx.moveTo(500,10);
+                            ctx.lineTo(450,80);
+                            ctx.lineTo(550,80);
+                            ctx.closePath();
+                            ctx.stroke();
+                            // 画一个圆
+                            ctx.fillStyle="#3344FF";
+                            ctx.beginPath();
+                            ctx.arc(60,140,40,0,Math.PI*2,true);
+                            ctx.closePath();
+                            ctx.fill();
+                            //画一个扇形
+                            ctx.fillStyle="#55FF66";
+                            ctx.beginPath();
+                            ctx.arc(160,140,40,0,Math.PI,true);
+                            ctx.closePath();
+                            ctx.fill();
+                            // 画一段圆弧
+                            ctx.strokeStyle="#223377";
+                            ctx.beginPath();
+                            ctx.arc(160,150,40,0,Math.PI,false);
+                            ctx.closePath();
+                            ctx.stroke();
+                            // 输出文字
+                            ctx.fillStyle="#EE0055";
+                            ctx.font="16pt 黑体";
+                            ctx.fillText("风云龙工作室",250,120);
+                            ctx.strokeStyle="#EE0000";
+                            ctx.font="30pt 黑体";
+                            ctx.lineWidth="1";
+                            ctx.strokeText("风云龙工作室",250,180);
+                            // 输出图像
+                            var img=new Image();
+                            img.src="images/dragon_small.jpg";
+                            ctx.drawImage(img,500,110);
+
+
+                        </script>
+                    </div>
+                    <li>command：表示命令按钮，比如单选按钮、复选框或按钮。只有当&lt;command&gt;元素位于&lt;menu&gt;元素内时，该元素才是可见的，否则不会显示这个元素，但是可以用它规定键盘快捷键。</li>
+                    <div class="shili">
+                         <menu>
+                            <command onclick="alert('Hello World')">Click Me!（目前只有IE 9支持此功能。）</command>
+                         </menu>
+                    </div>
+                    <li>output：定义不同类型的输出，比如脚本的输出。</li>
+                    <li>source：媒介元素，比如为 video 和 audio 定义媒介资源。</li>
+                    <li>menu：定义菜单列表，当希望列出表单控件时使用该标签。注意与nav的区别，menu专门用于表单控件。</li>
+                </ol>
+            </section>
+            <hr>
+
+            <section>
+                <h3>7、新增的全局属性</h3>
+                <ol>
+                    <li>contenteditable：属性值为true、false、及classname，规定是否为可编译的文本。</li>
+                    <div class="shili">
+                        <p contenteditable="true">这里的内容是可以编辑的，但是不能保存。</p>
+                    </div>
+                    <li>spellcheck：对于input、textarea、可编辑的内容进行拼写检查，属性值为true、false；</li>
+                    <div class="shili">
+                        <p><form><input type="text" spellcheck="true"></form></p>
+                    </div>
+                    <li>tabindex：用于按tab键或鼠标时获取焦点的顺序，属性值为数字，当值为-1时，按tab键不能获取焦点，可以通过程序读到tabindex属性的值。</li>
+                    <div class="shili">
+                        <form>
+                            <input type="button" tabindex="2" value="测试按钮1">
+                            <input type="button" tabindex="1" value="测试按钮2">
+                            <input type="button" tabindex="3" value="测试按钮3">
+                        </form>
+                    </div>
+                </ol>
+            </section>
+            <hr>
+
+            <section>
+                <h3>8、FORM相关属性</h3>
+                <ol>
+                    <li>autocomplete：规定输入字段是否启用自动完成功能（第一次输入时无效果），取值为on或off。</li>
+                    <li>autofocus：页面加载时，域自动获得焦点。</li>
+                    <li>form：用来规定输入域所属的一个或多个表单。</li>
+                    <li>form overrides属性
+                        <ul>
+                            <li>formaction：重写表单的action属性。</li>
+                            <li>formenctype：重写表单的enctype属性。</li>
+                            <li>formmethod：重写表单的method属性。</li>
+                            <li>formnovalidate：重写表单的novalidate属性。</li>
+                            <li>formtarget：重写表单的target属性。</li>
+                        </ul>
+                    </li>
+                    <li>width和height：用来规定image类型图像的宽度和高度。</li>
+                    <li>list：规定输入域的datalist。</li>
+                    <li>min/max/step：用来规定输入域的最小值、最大值和步长。</li>
+                    <li>multiple：用来规定输入域中可以选择多个值。</li>
+                    <li>pattern：用来规定输入的模式规则。</li>
+                    <li>placeholder：用来提供一种提示信息，描述输入域所期望的值。</li>
+                    <li>required：用来规定在提交之前必须输入的域，即不能为空。</li>
+                </ol>
+            </section>
+            <hr>          
+
+            <section>
+                <h3>9、链接相关属性</h3>
+                <ol>
+                    <li>media：用来规定URL是为什么类型的媒体或设备进行优化的，用来对特殊设备如手机、打印机进行优化。</li>
+                    <li>target：&lt;base&gt;标签新增属性，用来与&lt;a&gt;标签保持一致。</li>
+                </ol>
+            </section>
+            <hr>
+
+            <section>
+                    <h3>10、标题文字：在页面和搜索引擎中强调重要的信息。</h3>
+                    <p>
+                        <ul>
+                            <li>默认设置1
+                                <ul>
+                                    <li>h1{font-size:2em;margin:1.34em 0;}</li>
+                                    <li>h2{font-size:1.5em;margin:1.25em 0;}</li>
+                                    <li>h3{font-size:1.17em;margin:1.17em 0;}</li>
+                                    <li>h4{font-size:1em;margin:1.33em 0;}</li>
+                                    <li>h5{font-size:0.83em;margin:1.39em 0;}</li>
+                                    <li>h6{font-size:0.75em;margin:1.75em 0;}</li>
+                                </ul>
+                            </li>
+                            <li>默认设置2
+                                <ul>
+                                    <li>h1{font-size:xx-large;}</li>
+                                    <li>h2{font-size:x-large;}</li>
+                                    <li>h3{font-size:large;}</li>
+                                    <li>h4{font-size:medium;}</li>
+                                    <li>h5{font-size:small;}</li>
+                                    <li>h6{font-size:x-small;}</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    <div class="shili">
+                        <h1>这里显示的是1号标题</h1>
+                        <h2>这里显示的是2号标题</h2>
+                        <h3>这里显示的是3号标题</h3>
+                        <h4>这里显示的是4号标题</h4>
+                        <h5>这里显示的是5号标题</h5>
+                        <h6>这里显示的是6号标题</h6>
+                        <hr>
+                        <script type="text/javascript">
+                            var i;
+                            for(i=1;i<=6;i++){
+                                document.write("<h"+i+">"+"这里显示的是"+i+"号标题</h"+i+">");
+                            }
+                        </script>
+                    </div>                    
+            </section>
+            <hr>
+
+            <section>
+                <h3>11、字体：先英文后中文，中间用逗号分隔。</h3>
+                <div class="shili">
+                    <p style="font-family:Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif;">Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif(非衬线字体簇)</p>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>12、字号：单位有px/pt/em。</h3>
+                <p>
+                    font-size:xx-small|x-small|small|medium|large|x-large|xx-large|larger|smaller|length
+                </p>
+                <aside>
+                    <a href="font_size.html" target="_blank">【示例】：动态改变文字的字号和颜色</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>13、颜色</h3>
+                <table>
+                    <caption>颜色的表示方法</caption>
+                    <tr>
+                        <th>序号</th>
+                        <th>属性值</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>color_name</td>
+                        <td>颜色名称，如“red”</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>hex_number</td>
+                        <td>十六进制表示的颜色，如“#FFFFFF”</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>reg_number</td>
+                        <td>rgb表示的颜色，如“rgb(255,0,0)”</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>rgba_number</td>
+                        <td>rgba表示的颜色，如“rgba(255,0,0,0.6)”</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>inherit</td>
+                        <td>从父元素继承的颜色</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>hsl_number</td>
+                        <td>hsl表示的颜色，如“hsl(320,75%,60%)”</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>hsla_number</td>
+                        <td>hsla表示的颜色，如“hsl(320,75%,60%,0.6)”</td>
+                    </tr>
+                </table>
+                <aside>
+                    <a href="left_menu.html" target="_blank">【示例】：垂直导航条</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>14、文本风格</h3>
+                <div class="shili">
+                    <p><b>这里是加粗文本显示</b></p>
+                    <p><i>这里是斜体文本显示</i></p>
+                    <p><u>这里是下划线文本显示</u></p>
+                    <p><small>这里是较小字号文本显示</small></p>
+                    <p><strong>这里是重要文本显示</strong></p>
+                    <p><em>这里是强调文本显示</em></p>
+                    <p><del>这是删除文本显示</del></p>
+                    <p><ins>这里是插入文本显示</ins></p>
+                    <hr>
+                    <p style="font-weight:bold">这里是加粗显示</p>
+                    <p style="font-style:italic">这里是斜体显示</p>
+                    <p style="font-style:oblique">这里是另一种斜体显示</p>                   
+                </div>                
+            </section>
+            <hr>            
+
+            <section>
+                <h3>15、文本阴影:text-shadow:h-shadow v-shadow blur color</h3>
+                <div class="shili">
+                    <p style="text-shadow:5px 5px 3px #000000;font-size:2em">文本阴影</p>
+                    <p style="text-shadow:5px 5px 3px #000000;font-size:2em">Text Shadow</p>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>16、控制换行</h3>
+                <ol>
+                    <li>使用white-space控制换行
+                        <ul>
+                            <li>pro：空白会被浏览器保留，其行为方式类似于&lt;pre&gt;标签。</li>
+                            <li>nowrap：文本不会换行，会在同一行上继续，直到遇到&lt;br&gt;标签。</li>
+                            <li>pre-wrap：保留空白符序列，但是正常地进行换行。</li>
+                            <li>pre-line：合并空白符序列，但是保留换行符。</li>
+                            <li>inherit：从父元素继承white-space的值。</li>
+                        </ul>
+                    </li>
+                    <li>&lt;br&gt;标签
+                        <ul>
+                            <li>插入一个简单的换行符，换行后上下文文字距离是由line-height决定的。</li>
+                            <li>如果希望当前文本流在当前左边或右边内联表格或图像的下一行继续输出，则可以使用clear属性。</li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="shili">
+                    <p style="white-space:pre-line">
+                        这是第一行
+                        这是第二行
+                        这是第三行
+                    </p>
+                    <hr>
+                    <p>2018年，改革开放40周年；2019年，新中国成立70周年；2020年，全面建成小康社会；2021年，中国共产党成立100周年……习近平总书记强调，这些重要的时间节点，是我们工作的坐标，更标志着中国开启圆梦复兴的新征程。<img src="images/dragon_small.jpg" style="float:left">After 40 years of reform, opening up and development, China is standing in a "new era." The ultimate goal of this period is the "great rejuvenation of the nation," a blueprint set forth by Chinese President Xi Jinping, who plans to push his country forwards in a "new era" during which "no one must be left behind."</p>
+                    <hr>
+                    <p>2018年，改革开放40周年；2019年，新中国成立70周年；2020年，全面建成小康社会；2021年，中国共产党成立100周年……习近平总书记强调，这些重要的时间节点，是我们工作的坐标，更标志着中国开启圆梦复兴的新征程。<img src="images/dragon_small.jpg" style="float:left"><br>After 40 years of reform, opening up and development, China is standing in a "new era." The ultimate goal of this period is the "great rejuvenation of the nation," a blueprint set forth by Chinese President Xi Jinping, who plans to push his country forwards in a "new era" during which "no one must be left behind."</p>
+                    <hr>
+                    <p>2018年，改革开放40周年；2019年，新中国成立70周年；2020年，全面建成小康社会；2021年，中国共产党成立100周年……习近平总书记强调，这些重要的时间节点，是我们工作的坐标，更标志着中国开启圆梦复兴的新征程。<img src="images/dragon_small.jpg" style="float:left"><br clear="left">After 40 years of reform, opening up and development, China is standing in a "new era." The ultimate goal of this period is the "great rejuvenation of the nation," a blueprint set forth by Chinese President Xi Jinping, who plans to push his country forwards in a "new era" during which "no one must be left behind."</p>
+                </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>17、列表</h3>
+                <div class="shili">
+                    <ul>
+                        <li>
+                            第一级列表1
+                            <ul>
+                                <li>第二级列表1</li>
+                                <li>第二级列表2</li>
+                                <li>第二级列表3</li>
+                            </ul>
+                        </li>
+                        <li>
+                            第一级列表2
+                            <ul>
+                                <li>第二级列表1</li>
+                                <li>第二级列表2</li>
+                                <li>第二级列表3</li>
+                            </ul>
+                        </li>
+                        <li>
+                            第一级列表3
+                            <ul>
+                                <li>第二级列表1</li>
+                                <li>第二级列表2</li>
+                                <li>第二级列表3</li>
+                            </ul>
+                        </li>
+                        <li>
+                            第一级列表4
+                            <ul>
+                                <li>第二级列表1</li>
+                                <li>第二级列表2</li>
+                                <li>第二级列表3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <aside>
+                    <a href="list01.html" target="_blank">【示例】：带隐藏功能的列表</a><br>
+                    <a href="list02.html" target="_blank">【示例】：水平导航条</a><br>
+                    <a href="list03.html" target="_blank">【示例】：图文混排列表</a><br>
+                    <a href="list04.html" target="_blank">【示例】：自定义列表</a><br>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>18、图像</h3>
+                <aside>
+                    <a href="list03.html" target="_blank">【示例】：图文混排列表</a><br>
+                    <a href="menu.html" target="_blank" title="水平导航条">【示例】：水平导航条（图片背景）</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>19、超链接</h3>
+                <div class="shili">
+                    <a href="http://www.fylstudio.com" target="_blank" title="风云龙工作室">1、外部链接</a><br>
+                    <a href="menu.html" target="_blank" title="水平导航条">2、内部链接</a><br>
+                    <a href="images/liangliang.mp3" target="_blank" title="播放音乐">3、播放音乐</a><br>
+                    <a href="images/dayu.mp4" target="_blank" title="播放视频">4、播放视频</a><br>
+                    <a href="images/20171203.pdf" target="_blank" title="阅读PDF">5、PDF阅读</a><br>
+                    <a href="mailto:395269631@qq.com" title="发送邮件">6、发送邮件</a><br>
+                    <a href="#top" title="返回页面顶端">7、返回页面顶端</a><br>
+                    <a href="#this_bottom" title="返回页面底端">8、返回页面底端</a><br>
+                    9、图片热区超链接<br>
+                    <img src="images/topandbottom.png" usemap="topandbottom">
+                    <map name="topandbottom">
+                        <area shape="rect" coords="10,10,110,90" href="#top">
+                        <area shape="rect" coords="40,95,140,185" href="#this_bottom">
+                    </map>                
+                </div>
+                <aside>
+                    <a href="href.html" target="_blank" title="按钮样式的超链接">【示例】：按钮样式的超链接</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>20、多媒体</h3>
+                <ul>
+                    <li>支持的音频格式
+                        <ol>
+                            <li>mp3</li>
+                            <li>wav</li>
+                            <li>ogg</li>
+                        </ol>
+                    </li>
+                    <li>支持的视频格式
+                            <ol>
+                                <li>mp4</li>
+                                <li>webm</li>
+                                <li>ogg</li>
+                            </ol>
+                        </li>
+                </ul>    
+                <div class="shili">
+                    <script type="text/javascript">                        
+                        function musicplay(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            myaudio.volume=0.3;
+                            myaudio.play();
+                        }
+                        function musicpause(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            myaudio.pause();
+                        }
+                        function musicstop(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            myaudio.pause();
+                            myaudio.currentTime=0;
+                        }
+                        function volumeStronger(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            if(myaudio.volume<1){
+                                myaudio.volume=myaudio.volume+0.1;
+                            }                      
+                        }                        
+                        function volumeSmaller(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            if(myaudio.volume>0){
+                                myaudio.volume=myaudio.volume-0.1;
+                            }                      
+                        }
+                        function volumeMute(){
+                            var myaudio=document.getElementById("backgroundmusic");
+                            myaudio.volume=0;
+                        }
+                    </script>                    
+                    <audio id="backgroundmusic" controls="controls">
+                        <source src="images/liangliang.mp3" type="audio/mp3">
+                    </audio>
+                    <span style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="musicplay()">播放音乐</span>
+                    <spaan style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="musicpause()">暂停音乐</spaan>
+                    <spaan style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="musicstop()">停止音乐</spaan>
+                    <spaan style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="volumeSmaller()">减小音量</spaan>
+                    <spaan style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="volumeMute()">静音</spaan>
+                    <spaan style="background-color:rgb(186, 231, 135);cursor:pointer;" onclick="volumeStronger()">增大音量</spaan>                    
+                </div>            
+            </section>
+            <hr>
+
+            <section>
+                <h3>21、表格</h3>
+                <aside>
+                    <a href="table01.html" target="_blank" title="表格的示例">【示例】表格-1</a><br>
+                    <a href="table02.html" target="_blank" title="表格的示例">【示例】表格-2</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>22、表单</h3>
+                <ul>
+                    <li>form-method
+                        <ol>
+                            <li>get：明文</li>
+                            <li>post：隐蔽</li>
+                        </ol>
+                    </li>
+                    <li>form:enctype
+                        <ol>
+                            <li>application/x-www-form-rulencoded：默认值，允许普通字符，特殊字符提交给服务器，不允许提交文件。</li>
+                            <li>multipart/form-data：允许将文件提交给服务器。</li>
+                            <li>text/plain：只允许提交普通字符，特殊字符和文件都无法提交。</li>
+                            <li>如果要提交文件，则method必须为post,enctype必须为multipart/form-date。</li>
+                        </ol>
+                    </li>
+                    <li>input元素的属性
+                        <ol>
+                            <li>type：根据不同的type的属性值，可以创建各种不同类型的输入控件。</li>
+                            <li>value：提交给服务器的值。</li>
+                            <li>size：输入框的大小（字符计）。</li>
+                            <li>maxlength：规定允许输入的最大长度。</li>
+                            <li>name：元素的名称，用于程序调用。</li>
+                            <li>disabled：禁用元素。</li>
+                            <li>autocomplete：是否使用输入的自动完成功能，on|off。</li>
+                            <li>autofocus：元素在页面加载时是否获得焦点。</li>
+                            <li>list：引用预定义的datalist。</li>
+                            <li>form：规定元素所属的一个或多个表单。</li>
+                            <li>min/max：元素的最小值和最大值。</li>
+                            <li>multiple：允许用户输入一个以上的值，适用于email/file。</li>
+                            <li>pattern：用于检查元素的正则表达式。</li>
+                        </ol>
+                    </li>
+                </ul>
+                <table>
+                    <caption>正则表达式</caption>
+                    <tr>
+                        <th>序号</th>
+                        <th>规则</th>
+                        <th>说明</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>字符集合：[xyz]</td>
+                        <td>匹配xyz中的任意一个</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>字符集合：[xyz]{5}</td>
+                        <td>匹配xyz中的任意一个，且恰好重复5次</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>字符范围：[a-zA-Z]</td>
+                        <td>匹配a-zA-Z大小写英文字母中的任意一个</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>负值字符集合：[^xyz]</td>
+                        <td>匹配xyz之外的任何一个字符</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>负值字符范围：[^a-z]</td>
+                        <td>匹配a-z之外的任何一个字符</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>常用元字符.</td>
+                        <td>匹配除换行符之外的任意字符</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>常用元字符\w</td>
+                        <td>匹配字母、数字、下划线，相当于[a-zA-Z0-9]</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>常用元字符\d</td>
+                        <td>匹配数字，相当于[0-9]</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>常用元字符\u4e00-\u9fa5</td>
+                        <td>匹配汉字的unicode编码的范围[\u4e00-\u9fa5]</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>常用限定符*</td>
+                        <td>重复零次或更多次</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>常用限定符{n}</td>
+                        <td>恰好重复n次</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>常用限定符{n,}</td>
+                        <td>至少重复n次</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>常用限定符{n,m}</td>
+                        <td>至少重复n次，但不能超过m次</td>
+                    </tr>
+                </table>
+                <aside>
+                    <a href="formexample.html" target="_blank" title="表单示例">【示例】：表单</a>
+                </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>23、CSS</h3>
+                <p></p>
+                <aside></aside>
+            </section>
+            <hr>
+
+            <section>
+                    <h3>24、JavaScript</h3>
+                    <ol>
+                        <li>
+                            eval()：对字符串表达式进行求值。
+                            <div class="shili">
+                                <form>
+                                    <input id="bds" type="text">=<input id="jg" type="text"><br>
+                                    <input type="button" value="计算" onclick="js()">
+                                </form>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                    <aside></aside>
+                </section>
+                <hr>
+
+
+        
+
+
+
+            
+
+
+
+        
+
+
+
+
+        </article>
+
+    </div>
+
+    <footer id="this_bottom">
+        &copy;1997-2018 风云龙工作室（www.fylstudio.com）版权所有<br/>
+        <a href="http://www.miitbeian.gov.cn/" target="_blank" title="网络备案">陇ICP备17006351号</a><br/>
+        <a href="http://www.beian.gov.cn/" target="_blank"><img src="images/beian.png" alt="公安网络备案图标" title="公安网络备案"></a>
+    </footer>
+</body>
+</html>

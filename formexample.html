@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单示例</title>
+    <style>
+        section{
+            width:800px;
+            margin:0px auto;
+            padding:15px;
+            background-color:#EEEEEE;
+        }
+        section table{
+            border:2px solid #666666;
+            width:600px;
+            margin:0px auto;
+            border-collapse:collapse;
+        }
+        section table caption{
+            font:1.5em/1.5 Tahoma,Arial,Microsoft Yahei,sans-serif;
+            color:black;
+        }
+        section table tr{
+            font:1.0em/1.0 Tahome,Arial,Microsoft Yahei,sans-serif;
+            color:#333333;
+        }
+        section table tr:nth-child(even){
+            background-color:#DDDDDD;
+        }
+        section table tr td:nth-child(1){
+            text-align:center;
+            width:10%;
+        }
+        section table tr td:nth-child(2){
+            text-align:right;
+            width:30%;
+        }
+        section table tr td:nth-child(3){
+            text-align:left;
+            width:60%;
+        }
+        section table tr td{
+            border:1px solid #999999;
+            padding:10px;
+        }      
+        section form input:invalid{
+            background-color:rgba(253, 83, 5,0.2);
+        }  
+        section form input:valid{
+            background-color:rgba(134, 243, 10,0.2);
+        }
+        section form input{
+            font:0.9em/0.9 Tahoma,Arial,Microsoft Yahei,sans-serif;
+            color:#222222;
+        }
+    </style>
+    <script type="text/javascript">
+        function changegrade(){
+            document.getElementById("usergrade").value=document.getElementById("changeusergrade").value;
+        }
+    </script>
+</head>
+<body>
+    <section>
+        <form action="" name="user_regist" id="userregist" method="post" enctype="multipart/form-data">
+            <table>
+                <caption>用户注册</caption>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <label for="username">用户名：</label>
+                    </td>
+                    <td>
+                        <input type="text"  name="user_name" id="username" pattern="[\w]{6,}" placeholder="6位以上的字母、数字、下划线！" autofocus="autofocus" required="required" autocomplete="on">
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><label for="userpassword">密码：</label></td>
+                    <td>
+                        <input type="password" name="user_password" id="userpassword" pattern=".{8,}" placeholder="8位以上的任意字符！" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><label for="confirmuserpassword">确认密码：</label></td>
+                    <td>
+                        <input type="password" name="confirm_user_password" id="confirmuserpassword" pattern=".{8,}" placeholder="8位以上的任意字符！" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>性别：</td>
+                    <td>
+                        <input type="radio" name="user_sex" id="usersexman" value="男" required="required" checked="checked">
+                            <label for="usersexman">男</label>
+                        <input type="radio" name="user_sex" id="usersexwoman" value="女" required="required">
+                            <label for="usersexwoman">女</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><label for="usertruename">真实姓名：</label></td>
+                    <td>
+                        <input type="text" name="user_true_name" id="usertruename" pattern="[\u4e00-\u9fa5]{2,}" placeholder="两个汉字以上！" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><label for="userage">年龄：</label></td>
+                    <td>
+                        <input type="number"  name="user_age" id="userage"min="0"  max="120" step="1" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>爱好：</td>
+                    <td>
+                        <input type="checkbox" name="favirate" id="music">
+                            <label for="music">音乐</label>
+                        <input type="checkbox" name="favirate" id="movie">
+                            <label for="movie">电影</label>
+                        <input type="checkbox" name="favirate" id="travel">
+                            <label for="travel">旅游</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><label for="useremail">邮箱：</label></td>
+                    <td>
+                        <input type="email" name="user_email" id="useremail" required="required">
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><label for="userphone">手机号：</label></td>
+                    <td>
+                        <input type="tel" name"user_phone" id="userphone" pattern="[0-9]{11}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><label for="userxiaoqu">所在校区：</label></td>
+                    <td>
+                        <input type="text" name="user_xiaoqu" id="userxiaoqu" list="userxq" placeholder="请选择！">
+                            <datalist id="userxq">
+                                <option value="校本部"></option>
+                                <option value="培黎校区"></option>
+                                <option value="东校区"></option>
+                            </datalist>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td><label for="userbirthday">出生日期：</label></td>
+                    <td>
+                        <input type="date"   name="user_birthday" id="userbirthday">
+                    </td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td><label for="userregistdate">入学年月：</label></td>
+                    <td>
+                        <input type="month" name="user_regist_date" id="userregistdate">
+                    </td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td><label for="usergrade">年级：</label></td>
+                    <td>
+                        <input type="text" name="user_grade" id="usergrade" size="3" value="1">
+                        <input type="range" name="change_user_grade" id="changeusergrade" min="1" max="4" step="1" value="1" onchange="changegrade()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td><label for="userstudyweek">学习结束周：</label></td>
+                    <td>
+                        <input type="week" name="user_study_week" id="userstudyweek">
+                    </td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td><label for="userregisttime">注册时间：</label></td>
+                    <td>
+                        <input type="datetime-local" name="user_regist_time" id="userregisttime">
+                    </td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>籍贯：</td>
+                    <td>
+                        <select id="s_province" name="s_province"></select>&nbsp;&nbsp;
+                        <select id="s_city" name="s_city" ></select>&nbsp;&nbsp;
+                        <select id="s_county" name="s_county"></select>
+                        <script type="text/javascript" src="area.js"></script>
+                        <script type="text/javascript">_init_area();</script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td><label for="usercolor">色块展示：</label></td>
+                    <td>
+                        <input type="color" name="user_color" id="usercolor">
+                    </td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td><label for="userimg">图片展示：</label></td>
+                    <td>
+                        <input type="image" name="user_img" id="userimg" src="images/dragon_small.jpg" width="50px" height="50px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td><label for="userphoto">用户照片：</label></td>
+                    <td>
+                        <input type="file" name="user_photo" id="userphoto">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit"> 
+                    </td>
+                    <td>
+                        <input type="reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </section>
+    
+</body>
+</html>
