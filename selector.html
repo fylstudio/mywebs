@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS选择器示例</title>
+    <style type="text/css">
+        /* 类型选择器 */
+        article{
+            width:60%;
+            margin:0px auto;
+            background-color:#EEEEEE;
+        }
+        /* ID选择器 */
+        #title{
+            color:blue;
+            text-align:center;
+        }
+        /* CLASS选择器 */
+        .author{
+            text-align:right;
+            color:rgb(9, 145, 145);
+        }
+        /* 属性选择器 */
+        /* [type]{
+            background-color:rgb(9, 245, 40);
+        }*/
+        /*[type="button"]{
+            background-color:rgb(9, 245, 40);
+        }
+        */
+        /* [type^="t"]{ 
+            background-color:rgb(9, 245, 40);
+        } */
+        /* [type$="n"]{
+            background-color:rgb(9, 245, 40);
+        } */
+        /* [type*="t"]{
+            background-color:rgb(9, 245, 40);
+        } */
+        /* [name|="user"]{
+            background-color:rgb(9, 245, 40);
+        } */
+        /* [name~="user"]{
+            background-color:rgb(9, 245, 40);
+        } */
+        /* 上下选择器 */
+        /* ul#mk li{
+            color:blueviolet;
+        } */
+        /* #mk>li>ul{
+            color:rgb(226, 43, 52);
+        } */
+        /* #mk>li~li{
+            color:rgb(226, 43, 52);
+        } */
+        /* #mk>li+li{
+            color:rgb(226, 43, 52);
+        } */
+        /* 结构化的伪类选择器 */
+        /* #mk>li:first-child{
+            color:rgb(226, 43, 52);
+        } */
+        /* #mk>li:last-child{            
+            color:rgb(226, 43, 52);
+        } */
+        /* #mk>li:nth-child(3){
+            color:rgb(226, 43, 52);
+        } */
+        /* #mk>li:nth-child(2n+1){
+            color:rgb(226, 43, 52);
+        }
+        #mk>li:nth-child(2n){
+            color:rgb(21, 145, 31);
+        } */
+        /* UI伪类选择器 */
+        a{
+            text-decoration:none;
+        }
+        a:link{
+            color:blueviolet;
+        }
+        a:visited{
+            color:rgb(8, 190, 32);
+        }
+        a:hover{
+            color:red;
+        }
+        a:active{
+            color:black;
+        }
+        input:focus{
+            background-color:rgb(245, 169, 169);
+        }
+        /* 伪元素选择器 */
+        section p{
+            text-indent:2em;
+        }
+        /* section p::first-letter{
+            color:red;
+            font-weight:bold;
+        } */
+        section p::first-line{
+            color:red;
+            font-weight:bold;
+        }
+        h2::before{
+            content:"=";
+        }
+        h2::after{
+            content:"=";
+        }
+    </style>
+</head>
+<body>    
+    <article>
+        <h2 id="title">大学计算机基础</h2>
+        <div class="author"><a href="http://www.fylstudio.com/" target="_blank">电子与信息工程学院 张明</a></div>
+
+        <section>
+            <ul id="mk">
+                <li>基础知识模块
+                    <ul>
+                        <li>知识单元1：计算机基础知识
+                            <ul>
+                                <li>项目1：计算机软硬件</li>
+                            </ul>
+                        </li>
+                        <li>知识单元2：Windows操作系统
+                            <ul>
+                                <li>项目2：定制与优化工作环境</li>
+                                <li>项目3：优化信息资源管理</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>办公应用模块
+                    <ul>
+                        <li>知识单元3： Word
+                            <ul>
+                                <li>项目4：制作迎新致词（文档的基本排版）</li>
+                                <li>项目5：制作学生成绩表(电子表格的创建与编辑）</li>
+                                <li>项目6：制作电子简报(图文混排)</li>
+                                <li>项目7：制作毕业论文(长文档的编排)</li>
+                                <li>项目8：入学通知书的批量制作(邮件合并)</li>
+                            </ul>
+                        </li>
+                        <li>知识单元4： Excel
+                            <ul>
+                                <li>项目9：创建学生成绩表（Excel基本操作）</li>
+                                <li>项目10：设置学生成绩表的格式（美化工作表）</li>
+                                <li>项目10：设置学生成绩表的格式（美化工作表）</li>
+                                <li>项目11：职工工资数据表的计算（公式与函数的使用）</li>
+                                <li>项目12：职工工资数据表的管理与分析（数据管理与图表）</li>
+                            </ul>
+                        </li>
+                        <li>知识单元5：  PowerPoint
+                            <ul>
+                                <li>项目13：一般演示文稿的制作</li>
+                                <li>项目14：专项幻灯片制作</li>
+                                <li>项目15：动画方案及高级动画设置</li>
+                                <li>项目16：多媒体音频、视频的制作</li>
+                            </ul>
+                        </li>                       
+                    </ul>
+                </li>
+                <li>网络应用模块
+                    <ul>
+                        <li>知识单元6：Internet应用
+                                <ul>
+                                    <li>项目17：初识计算机网络</li>
+                                    <li>项目18：Internet应用</li>
+                                </ul>
+                        </li>
+                        <li>知识单元7：信息检索
+                            <ul>
+                                <li>项目19：信息检索</li>
+                            </ul>
+                        </li>
+                        <li>知识单元8：信息安全
+                            <ul>
+                                <li>项目20：网络信息安全</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>社会调查模块
+                    <ul>
+                        <li>知识单元9：主流微机的配置与选购
+                            <ul>
+                                <li>项目21：主流微机的配置与选购</li>
+                            </ul>
+                        </li>
+                        <li>知识单元10：计算机技术在本专业中的应用与探索
+                            <ul>
+                                <li>项目22：计算机技术在本专业中的应用与探索</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <p>信息技术基础课程是为全校非计算机专业学生开设的通识教育课程，从应用的角度出发，使学生在掌握计算机基础知识和基本操作技能的基础上，熟练掌握主流操作系统、Office办公软件及Internet的应用，培养学生利用计算机技术收集信息和加工、处理信息的能力,以适应信息化社会的人才需求。同时，为专业学习和解决专业问题提供必要的信息技术支撑。</p>
+            <p>信息技术基础课程由《大学计算机基础Ⅰ》和《大学计算机基础Ⅱ》两个层次构成，每个层次中又进行了知识模块和知识单元的划分。</p>
+            <p>《大学计算机基础Ⅰ》由四个知识模块、十个知识单元构成，分为文史艺体和理工两个大类进行分类教学，可以条件免修。</p>
+            <p>《大学计算机基础Ⅱ》是在《大学计算机基础Ⅰ》的基础上支撑专业学习，每个专业从六个知识模块，十个知识单元中根据专业需求选择其中任意一个知识模块中的任意一个知识单元进行学习。</p>
+        </section>
+        <hr>
+        <form>
+            <label>姓名：
+                <input type="text" name="user-name">               
+            </label><br>
+            <label>留言：
+                    <input type="text" name="user comment">               
+                </label><br>
+            <input type="button" value="提交留言">
+        </form>
+    </article>
+</body>
+</html>

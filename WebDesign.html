@@ -449,6 +449,7 @@
             <section>
                 <h3>14、文本风格</h3>
                 <div class="shili">
+                    <h4>HTML实现</h4>
                     <p><b>这里是加粗文本显示</b></p>
                     <p><i>这里是斜体文本显示</i></p>
                     <p><u>这里是下划线文本显示</u></p>
@@ -458,6 +459,7 @@
                     <p><del>这是删除文本显示</del></p>
                     <p><ins>这里是插入文本显示</ins></p>
                     <hr>
+                    <h4>CSS实现</h4>
                     <p style="font-weight:bold">这里是加粗显示</p>
                     <p style="font-style:italic">这里是斜体显示</p>
                     <p style="font-style:oblique">这里是另一种斜体显示</p>                   
@@ -671,17 +673,17 @@
                             <li>post：隐蔽</li>
                         </ol>
                     </li>
-                    <li>form:enctype
+                    <li>form-enctype
                         <ol>
                             <li>application/x-www-form-rulencoded：默认值，允许普通字符，特殊字符提交给服务器，不允许提交文件。</li>
                             <li>multipart/form-data：允许将文件提交给服务器。</li>
                             <li>text/plain：只允许提交普通字符，特殊字符和文件都无法提交。</li>
-                            <li>如果要提交文件，则method必须为post,enctype必须为multipart/form-date。</li>
+                            <li>如果要提交文件，则method必须为post,enctype必须为multipart/form-data。</li>
                         </ol>
                     </li>
                     <li>input元素的属性
                         <ol>
-                            <li>type：根据不同的type的属性值，可以创建各种不同类型的输入控件。</li>
+                            <li>type：根据不同type的属性值，可以创建各种不同类型的输入控件。</li>
                             <li>value：提交给服务器的值。</li>
                             <li>size：输入框的大小（字符计）。</li>
                             <li>maxlength：规定允许输入的最大长度。</li>
@@ -805,7 +807,7 @@
             <hr>
 
             <section>
-                <h3>2、CSS的选择器</h3>
+                <h3>3、CSS的选择器</h3>
                     <ol>
                         <li>简单选择器（TYPE、ID、CLASS选择器）
                             <ol>
@@ -866,13 +868,35 @@
                             </ol>
                         </li>
                     </ol>
+                    <aside>
+                        <a href="selector.html"  title="CSS选择器示例" target="_blank">【示例】：CSS选择器示例</a>
+                    </aside>
             </section>
             <hr>
+
+            <section>
+                <h3>4、CSS的级联和继承</h3>
+                <ul>
+                    <li>Cascading算法
+                        <ul>
+                            <li>规则的重要性：！important</li>
+                            <li>规则的来源：origin，来自浏览器预设的、用户设置的、开发者开发的</li>
+                            <li>规则的选择器特指度：ID选择器>CLASS选择器>TYPE选择器</li>
+                            <li>相同特指度的规则，后出现的规则有效</li>
+                        </ul>
+
+                    </li>
+                    <li>继承的规则</li>
+                </ul>
+            </section>
+            <hr>
+
+
 
             <h2>第三部分：JavaScript</h2>
 
             <section>
-                    <h3>24、JavaScript</h3>
+                    <h3>1、JavaScript</h3>
                     <ol>
                         <li>
                             eval()：对字符串表达式进行求值。
