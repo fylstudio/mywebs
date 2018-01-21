@@ -823,6 +823,7 @@
                 </ol>
                 <div class="shili">
                     <p style="font-family:Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif;">font-family:Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif(非衬线字体簇)</p>
+                    <hr>
                     <p>font-size:xx-small|x-small|small|medium|large|x-large|xx-large|larger|smaller|length
                     </p>
                         
@@ -835,17 +836,28 @@
 
             <section>
                 <h3>6、text相关属性</h3>
-                <ul>
-                    <li>color：颜色</li>
+                <ol>
+                    <li>color：颜色-作用于文本和边框，即前景色</li>
                     <li>text-indent：首行缩进</li>
                     <li>letter-spacing：字符或文字间距</li>
                     <li>word-spacing：单词间距（中文无效）</li>
-                    <li>line-height：行高</li>
+                    <li>line-height：行高-32px/3（3倍）</li>
                     <li>text-decoration：修饰</li>
-                    <li>text-align:水平对齐方式</li>
-                    <li>vertical-align：垂直对齐方式</li>
+                    <li>text-align:水平对齐方式
+                        <ul>
+                            <li>作用于块级元素，对块中的所有元素都有效</li>
+                            <li>可继承</li>
+                        </ul>
+                    </li>
+                    <li>vertical-align：垂直对齐方式
+                        <ul>
+                            <li>作用于行级元素、表格</li>
+                            <li>不可继承</li>
+                            <li>参考基线<br><img src="images/vertical-align.png"></li>
+                        </ul>
+                    </li>
                     <li>text-shadow：阴影 text-shadow:h-shadow v-shadow blur color</li>
-                </ul>
+                </ol>
                 <table>
                     <caption>颜色的表示方法</caption>
                     <tr>
@@ -893,8 +905,19 @@
                     <p style="font-weight:bold">这里是加粗显示</p>
                     <p style="font-style:italic">这里是斜体显示</p>
                     <p style="font-style:oblique">这里是另一种斜体显示</p>   
+                    <hr>
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">文本阴影</p>
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">Text Shadow</p>
+                    <hr>
+                    <div style="text-align:right">
+                        <span><mark>默认(baseline):</mark>风云龙工作室<img src="images/dragon_small.jpg">www.fylstudio.com</span><hr>
+                        <span><mark>middle:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:middle">www.fylstudio.com</span><hr>
+                        <spa><mark>top:</mark>风云龙工作室<img src="images/dragon_small.jpg" n style="vertical-align:top">www.fylstudio.com</span><hr>
+                        <span><mark>bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:bottom">www.fylstudio.com</span><hr>
+                        <span><mark>text-top:</mark>风云龙工作室<img src="images/dragon_small.jpg" style="vertical-align:text-top">www.fylstudio.com</span><hr>
+                        <span><mark>text-bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:text-bottom">www.fylstudio.com</span><hr>
+                    </div>
+
                 </div>
                 <aside>
                     <a href="left_menu.html" target="_blank">【示例】：垂直导航条</a>
