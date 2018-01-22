@@ -809,7 +809,7 @@
                             <li>注意事项：
                                 <ul>
                                     <li>字体名尽量用英文书写。</li>
-                                    <li>多个单词表示的字体用单引号或双引号括起来。</li>
+                                    <li>多个单词或汉字表示的字体用单引号或双引号括起来。</li>
                                     <li>先英文后中文，中间用逗号分隔。</li>
                                 </ul>
                             </li>
@@ -819,13 +819,14 @@
                     <li>font-style：字体修饰</li>
                     <li>font-weight：加粗</li>
                     <li>font-variant：small-caps-小型大写字母字体</li>
-                    <li>font：简写属性 [font-style font-weight] font-size[/line-height] font-family</li>
+                    <li>font：简写属性 [font-style | font-weight] font-size[/line-height] font-family</li>
                 </ol>
                 <div class="shili">
-                    <p style="font-family:Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif;">font-family:Tahoma,Arial,"Microsoft Yahei",微软雅黑,sans-serif(非衬线字体簇)</p>
+                    <p style="font-family:Tahoma,Arial,"Microsoft YaHei",微软雅黑,sans-serif;">font-family:Tahoma,Arial,"Microsoft YaHei",微软雅黑,sans-serif(非衬线字体簇)</p>
                     <hr>
                     <p>font-size:xx-small|x-small|small|medium|large|x-large|xx-large|larger|smaller|length
-                    </p>
+                    </p><hr>
+                    <p style="font-variant:small-caps">Fylstudio</p>
                         
                 </div>
                 <aside>
@@ -845,13 +846,13 @@
                     <li>text-decoration：修饰</li>
                     <li>text-align:水平对齐方式
                         <ul>
-                            <li>作用于块级元素，对块中的所有元素都有效</li>
+                            <li>作用于<mark>块级元素</mark>，对块中的所有元素都有效</li>
                             <li>可继承</li>
                         </ul>
                     </li>
                     <li>vertical-align：垂直对齐方式
                         <ul>
-                            <li>作用于行级元素、表格</li>
+                            <li>作用于<mark>行级元素、表格</mark></li>
                             <li>不可继承</li>
                             <li>参考基线<br><img src="images/vertical-align.png"></li>
                         </ul>
@@ -898,13 +899,13 @@
                     <tr>
                         <td>7</td>
                         <td>hsla_number</td>
-                        <td>hsla表示的颜色，如“hsl(320,75%,60%,0.6)”</td>
+                        <td>hsla表示的颜色，如“hsla(320,75%,60%,0.6)”</td>
                     </tr>
                 </table>
                 <div class="shili">
                     <p style="font-weight:bold">这里是加粗显示</p>
                     <p style="font-style:italic">这里是斜体显示</p>
-                    <p style="font-style:oblique">这里是另一种斜体显示</p>   
+                    <p style="font-style:oblique">这里是另一种斜体显示</p>                      
                     <hr>
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">文本阴影</p>
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">Text Shadow</p>
@@ -916,12 +917,75 @@
                         <span><mark>bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:bottom">www.fylstudio.com</span><hr>
                         <span><mark>text-top:</mark>风云龙工作室<img src="images/dragon_small.jpg" style="vertical-align:text-top">www.fylstudio.com</span><hr>
                         <span><mark>text-bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:text-bottom">www.fylstudio.com</span><hr>
+                        <span><mark>length/%:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:20px">www.fylstudio.com</span><hr>
                     </div>
-
                 </div>
                 <aside>
                     <a href="left_menu.html" target="_blank">【示例】：垂直导航条</a>
                 </aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>7、盒模型与box-sizing</h3>
+                <ol>
+                    <li>
+                        box-sizing：content-box<br>
+                        <img src="images/boxmodel1.png" alt="盒模型" title="content-box">
+                    </li>
+                    <li>
+                        box-sizing：border-box<br>
+                        <img src="images/boxmodel2.png" alt="盒模型" title="border-box">
+                    </li>
+                </ol>
+            </section>
+            <hr>
+
+            <section>
+                <h3>8、外边距折叠</h3>
+                <ol>
+                    <li>水平外边距：相加。</li>
+                    <li>垂直外边距：取两者中较大的值。</li>
+                </ol>
+                <aside><a href="collapse.html" target="_blank" title="外边距折叠">【示例】:外边距折叠</a></aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>9、display</h3>
+                <ol>
+                    <li>inline：默认，此元素会被显示为内联元素，元素前后没有换行符。</li>
+                    <li>inline-block：行内块元素。</li>
+                    <li>block：显示为块级元素，此元素前后会带有换行符。</li>     
+                    <li>none：不会被显示。</li>                   
+                </ol>
+                <aside><a href="display.html" target="_blank" title="display">【示例】:display</a></aside>
+            </section>
+            <hr>
+
+            <section>
+                <h3>10、background</h3>
+                <ol>
+                    <li>background-color：背景颜色。</li>
+                    <li>background-image：背景图像。</li>
+                    <li>background-repeat：repeat（默认值）/repeat-x/repeat-y/no-repeat</li>
+                    <li>background-position：默认值：0% 0%
+                        <ol>
+                            <li>left/center/right top/center/bottom：如果仅规定了一个关键词，那么第二个值将是"center"。</li>
+                            <li>x% y%：如果仅规定了一个值，另一个值将是 50%。</li>
+                            <li>xpos ypos：如果仅规定了一个值，另一个值将是50%，也可以混合使用 % 和 position 值。</li>
+                        </ol>
+                    </li>
+                    <li>background-size：默认值 auto auto（原始大小）
+                        <ol>
+                            <li>xpx ypx</li>
+                            <li>% %（box为基础）</li>
+                            <li>contain（同比例放大或者缩小，直到某一边被box所包含）</li>
+                            <li>cover（同比例放大或者缩小，直到box被图片所全部覆盖）</li>
+                        </ol>                       
+                    </li>
+                    <li>background：background-image background-color background-repeat background-position</li>
+                </ol>
             </section>
             <hr>
 

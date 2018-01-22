@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display</title>
+    <style type="text/css">
+        article{
+            width:65%;
+            padding:15px;
+            background-color:aquamarine;
+            margin:auto;
+        }
+        a{
+            width:120px;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+            text-decoration:none;
+            background-color:blueviolet;
+            color:#FFFFFF;
+            margin:5px;
+        }
+        .display_inline a{
+            display:inline;
+        }
+        .display_inline-block a{
+            display:inline-block;
+        }
+        .display_block a{
+            display:block;            
+        }
+        .display_none a{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <article>        
+        <section class="display_inline">
+            <h3>inline</h3>
+            <p>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+            </p>
+        </section>
+        <hr>
+
+        <section class="display_inline-block">
+            <h3>inline-block</h3>
+            <p>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+            </p>
+        </section>
+        <hr>
+
+        <section class="display_block">
+                <h3>block</h3>
+                <p>
+                    <a href="#">导航链接</a>
+                    <a href="#">导航链接</a>
+                    <a href="#">导航链接</a>
+                    <a href="#">导航链接</a>
+                </p>
+        </section>
+        <hr>
+
+        <section class="display_none">
+            <h3>none</h3>
+            <p>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+                <a href="#">导航链接</a>
+            </p>
+        </section>
+        <hr>
+        
+    </article>
+</body>
+</html>
