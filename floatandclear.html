@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>浮动与清除</title>
+    <style type="text/css">
+        article{
+            width:800px;;
+            background-color:#EEEEEE;
+            padding:0px;
+            margin:0px auto;
+            color:#FFFFFF;
+        }
+        #div0{
+            width:100%;
+            background-color:rgb(134, 230, 198);
+            /* 让父元素围住浮动的子元素方法一 */
+            /* overflow:hidden; */
+            /* 让父元素围住浮动的子元素方法二 */
+            /* float:left; */
+        }
+        .clearfix::after{
+            content:".";
+            clear:both;
+            display:block;
+            visibility:hidden;
+            height:0px;
+
+        }      
+        #div1{
+            width:100px;
+            height:200px;
+            background-color:rgb(22, 22, 206);
+            float:left;
+        }
+        #div2{
+            width:200px;
+            height:100px;
+            background-color:rgb(184, 17, 17);
+            float:right;
+        }
+        #div3{
+            width:700px;
+            height:100px;
+            background-color:rgb(7, 141, 14);
+            /* clear:both; */
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <section>
+            <div id="div0" class="clearfix">
+                <div id="div1">div1:100*200</div>
+                <div id="div2">div2:200*100</div>
+                <!-- 让父元素围住浮动的子元素方法三-1 -->
+                <!-- <div style="clear:both;"></div> -->
+            </div>
+            <div id="div3">div3:600*100</div>           
+        </section>
+    </article>
+    
+</body>
+</html>

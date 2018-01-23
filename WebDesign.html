@@ -852,7 +852,7 @@
                     </li>
                     <li>vertical-align：垂直对齐方式
                         <ul>
-                            <li>作用于<mark>行级元素、表格</mark></li>
+                            <li>作用于<mark>一个具体的行级元素、表格单元格自身的对齐方式</mark></li>
                             <li>不可继承</li>
                             <li>参考基线<br><img src="images/vertical-align.png"></li>
                         </ul>
@@ -910,18 +910,10 @@
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">文本阴影</p>
                     <p style="text-shadow:5px 5px 3px #000000;font-size:2em">Text Shadow</p>
                     <hr>
-                    <div style="text-align:right">
-                        <span><mark>默认(baseline):</mark>风云龙工作室<img src="images/dragon_small.jpg">www.fylstudio.com</span><hr>
-                        <span><mark>middle:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:middle">www.fylstudio.com</span><hr>
-                        <spa><mark>top:</mark>风云龙工作室<img src="images/dragon_small.jpg" n style="vertical-align:top">www.fylstudio.com</span><hr>
-                        <span><mark>bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:bottom">www.fylstudio.com</span><hr>
-                        <span><mark>text-top:</mark>风云龙工作室<img src="images/dragon_small.jpg" style="vertical-align:text-top">www.fylstudio.com</span><hr>
-                        <span><mark>text-bottom:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:text-bottom">www.fylstudio.com</span><hr>
-                        <span><mark>length/%:</mark>风云龙工作室<img src="images/dragon_small.jpg"  style="vertical-align:20px">www.fylstudio.com</span><hr>
-                    </div>
                 </div>
                 <aside>
-                    <a href="left_menu.html" target="_blank">【示例】：垂直导航条</a>
+                    <a href="left_menu.html" target="_blank">【示例】：垂直导航条</a><br>
+                    <a href="alignment.html" target="_blank">【示例】：对齐方式</a>
                 </aside>
             </section>
             <hr>
@@ -986,6 +978,27 @@
                     </li>
                     <li>background：background-image background-color background-repeat background-position</li>
                 </ol>
+            </section>
+            <hr>
+
+            <section>
+                <h3>11、浮动（float）与清除（clear）</h3>
+                <ul>
+                    <li>浮动的特点：
+                        <ol>
+                            <li>脱离正常的文档流，相当于正常文档流中没有这个元素。</li>
+                            <li>不再受父元素height的包裹，但是仍然受到width的限制。</li>
+                        </ol>
+                    </li>
+                    <li>父元素围住浮动子元素的方法：
+                        <ol>
+                            <li>父元素添加{overflow:hidden；}</li>
+                            <li>父元素添加{float:left/right;}，此时会改变与此父元素同级的元素的布局。</li>
+                            <li>给父元素添加一个伪元素.clearfix::after{content:".";clear:both;display:block;visibility:hidden;height:0px;}</li>
+                        </ol>
+                    </li>
+                </ul>
+                <aside><a href="floatandclear.html" target="_blank" title="浮动与清除">【示例】：浮动与清除</a></aside>
             </section>
             <hr>
 
