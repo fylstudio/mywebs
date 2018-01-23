@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三列中间列自适合布局</title>
+    <style type="text/css">
+        .clearfix::after{
+            content:".";
+            clear:both;
+            display:block;
+            visibility:hidden;
+            height:0px;
+        }      
+        #div0{
+            width:80%;
+            background-color:rgb(236, 240, 241);    
+            padding:10px 0px;     
+            margin:0px auto; 
+        }        
+        #div1{
+            width:150px;
+            height:500px;
+            background-color:rgb(22, 22, 206);
+            float:left;
+            margin-left:10px;
+        }
+        #div2{
+            width:auto;
+            height:500px;
+            background-color:rgb(184, 17, 17);
+            margin-left:170px;
+            margin-right:230px;
+        }
+        #div3{
+            width:210px;
+            height:500px;
+            background-color:rgb(7, 141, 14);
+            float:right;
+            margin:0px 10px;
+        }
+    </style>
+</head>
+<body>  
+    <div id="div0" class="clearfix">
+        <div id="div1">div1</div>
+        <div id="div3">div3</div>
+        <div id="div2">div2</div>        
+    </div>       
+</body>
+</html>
