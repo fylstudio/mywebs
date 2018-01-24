@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝对定位和固定定位</title>
+    <style type="text/css">
+        #div0{
+            width:800px;
+            background-color:rgb(236, 240, 241);    
+            padding:10px;     
+            margin:0px auto; 
+        }   
+        #div0 form ul li{
+            width:400px;
+            height:50px;
+            background-color:rgb(201, 194, 207);
+            margin-top:10px;
+            line-height:50px;
+            padding-left:50px;
+            list-style:none;
+            position:relative;
+        }     
+        #div0 form ul li input[type="checkbox"]{
+            width:20px;
+            height:20px;
+            position:absolute;
+            right:50px;
+            top:15px;            
+        }
+        #div0 form input[type="button"]{
+            width:120px;
+            height:40px;
+            position:fixed;
+            left:800px;
+            top:50%;
+            margin-top:-20px;
+        }
+    </style>
+</head>
+<body>  
+    <div id="div0">
+        <form>
+            <ul>
+                <li>前端<input type="checkbox"></li>
+                <li>前端设计<input type="checkbox"></li>
+                <li>前端设计工程师<input type="checkbox"></li>
+                <li>前端<input type="checkbox"></li>
+                <li>前端设计<input type="checkbox"></li>
+                <li>前端设计工程师<input type="checkbox"></li>
+                <li>前端<input type="checkbox"></li>
+                <li>前端设计<input type="checkbox"></li>
+                <li>前端设计工程师<input type="checkbox"></li>
+            </ul>
+            <input type="button" value="提交反馈信息">
+        </form>
+    </div>       
+</body>
+</html>

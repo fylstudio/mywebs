@@ -1002,14 +1002,41 @@
                     <a href="floatandclear.html" target="_blank" title="浮动与清除">【示例】：浮动与清除</a><br>
                     <a href="float01.html" target="_blank" title="三列固定宽度布局">【示例】：三列固定宽度布局</a><br>
                     <a href="float02.html" target="_blank" title="三列中间列自适合布局">【示例】：三列中间列自适合布局</a>
-                </aside>
-                
+                </aside>                
             </section>
             <hr>
 
             <section>
-                <h3></h3>
-                <aside></aside>
+                <h3>12、定位（position）</h3>
+                <ol>
+                    <li>static：默认值，表示其元素是非定位元素，不是一个定位元素，也不具有定位元素的特征。</li>
+                    <li>relative：相对定位，相对于static的位置通过top、bottom、left、right进行定位。
+                        <ol>
+                            <li>元素相对于原来的位置可以做调整，但是其原来所占用的位置是被预留的，不会被后续元素补充。</li>
+                            <li>非定位元素→定位元素。</li>
+                            <li>为其后代元素做绝对定位提供参照物。</li>
+                            <li>提升了元素的默认层级，定位元素的层级高于非定位元素（z-index）。</li>
+                            <li>可以修改层级（z-index）。</li>
+                        </ol>
+                    </li>
+                    <li>absolute：绝对定位
+                        <ol>
+                            <li>类似于float，元素脱离正式的文档流。</li>
+                            <li>从父元素开始向上找，找到的第一个定位元素作为参照物，通过top、bottom、left、right进行定位，如果没有则以HTML的首屏区域（可随着垂直滚动条进行滚动）作为参照物。</li>
+                        </ol>
+                    </li>
+                    <li>fix：固定定位
+                        <ol>
+                            <li>类似于float，元素脱离正式的文档流。</li>
+                            <li>以浏览器视口（不随着垂直滚动条进行滚动）为参照物，通过top、bottom、left、right进行定位。</li>
+                        </ol>
+                    </li>
+                </ol>
+                <aside>
+                    <a href="position01.html" target="_blank" title="相对定位">【示例】：相对定位</a><br>
+                    <a href="position02.html" target="_blank" title="绝对定位">【示例】：绝对定位</a><br>
+                    <a href="position03.html" target="_blank" title="绝对定位">【示例】：绝对定位和固定定位</a><br>
+                </aside>          
             </section>
             <hr>
 
