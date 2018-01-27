@@ -1040,6 +1040,40 @@
             </section>
             <hr>
 
+            <section>
+                <h3>13、弹性盒子布局(flexbox)</h3>
+                <p><img src="images/flexbox.png"></p>
+                <ul>                    
+                    <li>Container：
+                        <ol>
+                            <li>display:flex/inline-flex</li>
+                            <li>flex-direction:row(默认)/row-reverse/column/column-reverse</li>
+                            <li>flex-wrap:nowrap(默认)/wrap/wrap-reverse</li>
+                            <li>flex-flow:flex-direction||flex-wrap</li>
+                            <li>justify-content(主轴方向):flex-start(默认)/flex-end/center/space-between/space-around</li>
+                            <li>align-content(侧轴方向):flex-start/flex-end/center/stretch(默认)/space-between/space-around</li>
+                            <li>align-items:flex-start/flex-end/center/stretch/baseline(默认)</li>                   
+                        </ol>
+                    </li>
+                    <li>Items：
+                        <ol>
+                            <li>order:0（默认），数字越小越优先显示</li>
+                            <li>align-self(对align-items进行单独的设置):auto(默认)/flex-start/flex-end/center/baseline/stretch</li>
+                            <li>flex-grow(主轴方向的增长因子):number(0为默认)</li>
+                            <li>flex-shrink(主轴方向的收缩因子):number(1为默认)</li>
+                            <li>flex-basis(主轴方向的原始大小,即有可能是width,也有可能是height):length|auto(默认)</li>
+                            <li>flex:none | flex-grow flex-shrink ||flex-basis(1 1 0%为缺省值)</li>
+                        </ol>
+                    </li>
+                </ul>
+                <aside>
+                    <a href="flexbox01.html" target="_blank" title="弹性盒子布局01">【示例】：弹性盒子布局01</a><br>
+                    <a href="flexbox02.html" target="_blank" title="弹性盒子布局02">【示例】：弹性盒子布局02</a><br>
+                    <a href="flexbox03.html" target="_blank" title="弹性盒子布局02">【示例】：弹性盒子布局03</a>
+                </aside>
+            </section>
+            <hr>
+
 
 
             <h2>第三部分：JavaScript</h2>
