@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式布局</title>
+    <style type="text/css">
+        html{
+            font-family:sans-serif;
+        }
+        body{
+            margin:0px;
+        }
+        .container{
+            margin:0px auto;
+            width:100vw;
+            background-color:#DDDDDD;
+            overflow:hidden;
+        }
+        nav,section{
+            margin:2%;
+            height:80vh;            
+        }
+        nav{
+            background-color:lightblue;
+            float:left;
+            width:20%;
+        }
+        section{
+            background-color:lightcoral;
+            float:left;
+            width:72%;
+        }
+        section img{
+            max-width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>nav</nav>
+        <section><img src="images/boxmodel1.png"></section>
+    </div>
+</body>
+</html>

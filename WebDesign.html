@@ -1051,7 +1051,7 @@
                             <li>flex-wrap:nowrap(默认)/wrap/wrap-reverse</li>
                             <li>flex-flow:flex-direction||flex-wrap</li>
                             <li>justify-content(主轴方向):flex-start(默认)/flex-end/center/space-between/space-around</li>
-                            <li>align-content(侧轴方向):flex-start/flex-end/center/stretch(默认)/space-between/space-around</li>
+                            <li>align-content(侧轴方向-多行的情况):flex-start/flex-end/center/stretch(默认)/space-between/space-around</li>
                             <li>align-items:flex-start/flex-end/center/stretch/baseline(默认)</li>                   
                         </ol>
                     </li>
@@ -1080,6 +1080,7 @@
                     <li>基于float的固定布局</li>
                     <li>基于float的流动布局</li>
                     <li>基于flexbox的布局</li>
+                    <li>基于bootstrap等的第三方布局</li>
                 </ol>
                 <aside>
                     <a href="grid01.html" target="_blank" title="Grid布局">【示例】：Grid布局01</a><br>
@@ -1089,6 +1090,64 @@
             </section>
             <hr>
 
+            <section>
+                <h3>15、响应式布局</h3>
+                <ul>
+                    <li>响应式设计与自适应设计
+                        <ol>
+                            <li>响应式设计：基于<mark>媒体查询</mark>的一整套设计，用来适应不同的终端；</li>
+                            <li>自适应设计：基于<mark>媒体侦测</mark>的多套设计，用来适应不同的终端。</li>
+                        </ol>
+                    </li>
+                    <li>响应式布局的实现方式：
+                        <ol>
+                            <li>流式布局（fluid grid）:vw/vh/%</li>
+                            <li>弹性媒体（flexible images）</li>
+                            <li>媒体查询（media queries）</li>                    
+                        </ol>
+                    </li>
+                </ul>                    
+                <aside>
+                    <a href="responsive01.html" target="_blank" title="响应式布局">【示例】：响应式布局01</a><br>
+                    <a href="responsive02.html" target="_blank" title="响应式布局">【示例】：响应式布局02</a><br>
+                    <a href="responsive03.html" target="_blank" title="响应式布局">【示例】：响应式布局03</a>
+                </aside>
+            </section>
+            
+            <section>
+                <h3>16、媒体查询（@media）</h3>
+                <ul>
+                    <li>基本格式：
+                        <ul>
+                            <li>
+                                @media mt and (mf1) and (mf2) and (mf3){rule1;rule2;}
+                            </li>
+                        </ul>
+                    </li>
+                    <li>媒体特征：
+                        <ol>
+                            <li>width</li>
+                            <li>height</li>
+                            <li>aspect-ratio:width与height的比率</li>
+                            <li>orientation:portrait(width小于等于height)/landscape(width大于height)</li>
+                        </ol>
+                    </li>
+                    <li>媒体类型：
+                        <ol>
+                            <li>all</li>
+                            <li>print</li>
+                            <li>screen</li>
+                            <li>speech:read out</li>
+                        </ol>
+                    </li>
+                </ul>
+                <div class="shili">
+                    @media screen and (min-width:768px){r1;r2;}<br>
+                    @media screen and (min-width:972px){r3;r4;}<br>
+                    @media screen and (min-width:1200px){r5;r6;}
+                </div>
+            </section>
+            <hr>
 
 
             <h2>第三部分：JavaScript</h2>
