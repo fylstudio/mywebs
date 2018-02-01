@@ -1052,7 +1052,7 @@
                             <li>flex-flow:flex-direction||flex-wrap</li>
                             <li>justify-content(主轴方向):flex-start(默认)/flex-end/center/space-between/space-around</li>
                             <li>align-content(侧轴方向-多行的情况):flex-start/flex-end/center/stretch(默认)/space-between/space-around</li>
-                            <li>align-items:flex-start/flex-end/center/stretch/baseline(默认)</li>                   
+                            <li>align-items:flex-start/flex-end/center/stretch(默认)/baseline</li>                   
                         </ol>
                     </li>
                     <li>Items：
@@ -1115,7 +1115,7 @@
             </section>
             
             <section>
-                <h3>16、媒体查询（@media）</h3>
+                <h3>16、媒体查询（@media）和移动设备优先</h3>
                 <ul>
                     <li>基本格式：
                         <ul>
@@ -1140,12 +1140,50 @@
                             <li>speech:read out</li>
                         </ol>
                     </li>
+                    <li>移动优先的好处：
+                        <ol>
+                            <li>节省流量</li>
+                            <li>加快渲染</li>
+                        </ol>
+                    </li>
                 </ul>
                 <div class="shili">
                     @media screen and (min-width:768px){r1;r2;}<br>
-                    @media screen and (min-width:972px){r3;r4;}<br>
+                    @media screen and (min-width:992px){r3;r4;}<br>
                     @media screen and (min-width:1200px){r5;r6;}
                 </div>
+            </section>
+            <hr>
+
+            <section>
+                <h3>17、Transform</h3>
+                <ul>
+                    <li>注意事项：
+                        <ol>
+                            <li>可变形元素：块级元素（block/inline-block），非行级元素。</li>
+                            <li>对content、padding、border、margin都有效果。</li>
+                        </ol>
+                    </li>
+                    <li>transform的属性（默认以中心点为基本点）
+                        <ol>
+                            <li>rotate:旋转</li>
+                            <li>scale:缩放</li>
+                            <li>translate:移动</li>
+                            <li>skew:变形</li>
+                            <li>可以组合应用:从右向左执行</li>
+                        </ol>
+                    </li>
+                    <li>transform-origin（设置基本点）
+                        <ol>
+                            <li>left/center/right top/center/bottom</li>
+                            <li>% %</li>
+                            <li>Xpx  Ypx</li>
+                        </ol>
+                    </li>
+                </ul>
+                <aside>
+                    <a href="transform.html" target="_blank" title="变形">【示例】：变形</a>
+                </aside>
             </section>
             <hr>
 

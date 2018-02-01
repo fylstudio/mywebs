@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transform</title>
+    <style type="text/css">
+        section{
+            margin:0px auto;
+            background-color:#DDDDDD;
+            width:80vw;
+            height:50vh;
+            padding:50px;
+            overflow:hidden;
+        }
+        div{
+            background-image:url("images/dragon_small.jpg");
+            width:80px;
+            height:80px;
+            border:2px solid rgb(145, 143, 143);
+            margin:40px;
+            float:left;
+        }
+        #div2{
+            transform:rotate(45deg);
+        }
+        #div3{
+            transform:rotate(-45deg);
+        }
+        #div4{
+            transform:scale(1.5);
+        }
+        #div5{
+            transform:scale(0.5);
+        }
+        #div6{
+            transform:scalex(1.5);
+        }
+        #div7{
+            transform:scaley(1.5);
+        }
+        #div8{
+            transform:scale(0.5,1.5);
+        }
+        #div9{
+            /* transform:translate(-20px); */
+            /* transform:translateY(-20px);  */
+            transform:translate(-20px,-20px);
+        }
+        #div10{
+            /* transform:skewX(45deg); */
+            /* transform:skewY(45deg); */
+            transform:skew(5deg,10deg);
+        }
+        #div11{
+            transform:rotate(45deg) scale(1.5);
+        }
+        #div12{
+            transform-origin:left top;
+            transform:rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div id="div1">1</div>
+        <div id="div2">2</div>
+        <div id="div3">3</div>
+        <div id="div4">4</div>
+        <div id="div5">5</div>
+        <div id="div6">6</div>
+        <div id="div7">7</div>
+        <div id="div8">8</div>
+        <div id="div9">9</div>
+        <div id="div10">10</div>        
+        <div id="div11">11</div>
+        <div id="div12">12</div>
+    </section>
+</body>
+</html>
