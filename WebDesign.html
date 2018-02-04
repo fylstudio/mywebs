@@ -1222,28 +1222,97 @@
 
 
             <h2>第三部分：JavaScript</h2>
-
             <section>
-                    <h3>1、JavaScript</h3>
-                    <ol>
-                        <li>
-                            eval()：对字符串表达式进行求值。
-                            <div class="shili">
-                                <form>
-                                    <input id="bds" type="text">=<input id="jg" type="text"><br>
-                                    <input type="button" value="计算" onclick="js()">
-                                </form>
-                            </div>
-                        </li>
-                        <li></li>
-                        <li></li>
-                    </ol>
-                    <aside></aside>
-                </section>
-                <hr>
+                <h3>1、JavaScript简介</h3>
+                <ul>
+                    <li>JavaScript的组成
+                        <ol>
+                            <li>ECMAScript/ES5/ES6</li>
+                            <li>DOM</li>
+                            <li>BOM</li>
+                        </ol>
+                    </li>
+                    <li>浏览器内核
+                        <ol>
+                            <li>渲染引擎：Webkit/Blink</li>
+                            <li>JS引擎：V8/Chakra</li>
+                        </ol>
+                    </li>
+                    <li>注意事项
+                        <ol>
+                            <li>标识符以字母、下划线、美元符号开始</li>
+                            <li>"use strict" 模式</li>
+                            <li>不要省略；{}</li>
+                            <li>局部变量（var）和全局变量</li>
+                        </ol>
+                    </li>
+                    <li>数据类型
+                        <ol>
+                            <li>Undefined：一个变量声明但是未初始化时</li>
+                            <li>Null：空对象指针</li>
+                            <li>Number</li>
+                            <li>Boolean</li>
+                            <li>String</li>
+                            <li>Object</li>
+                        </ol>
+                    </li>
+                    <li>typeof运算符：检测数据类型
+                        <ol>
+                            <li>typeof a</li>
+                            <li>typeof(a)</li>
+                        </ol>
+                    </li>
+                    <li>Number.NaN：NaN属性代表<mark>非数字值</mark>的特殊值，该属性用于指示某个值不是数字。
+                        <ul>
+                            <li>说明某些算术运算（如求负数的平方根）的结果不是数字；</li>
+                            <li>方法parseInt() 和parseFloat() 在不能解析指定的字符串时就返回这个值；</li>
+                            <li>对于一些常规情况下返回有效数字的函数，用Number.NaN说明它的错误情况。</li>
+                            <li>任何涉及NaN的操作，都会返回NaN；</li>
+                            <li>NaN与任何值都不相等，包括NaN本身。</li>
+                        </ul>
+                    </li>
+                    <li>JavaScript的运算符
+                        <ol>
+                            <li>一元运算符：++ -- + -</li>
+                            <li>布尔运算符：！ && ||</li>
+                            <li>相等运算符：== ！=（相等：先转换类型再比较） === ！==（全等：直接比较，即要求类型要一致）</li>
+                            <li>其它运算符：位运算符、乘性运算符、加性运算符、关系运算符、条件运算符、赋值运算符、逗号运算符</li>
+                        </ol>
+                    </li>
+                    <li>JavaScript的语句
+                        <ol>
+                            <li>表达式语句：一般表达式语句/赋值语句/声明语句/函数调用语句</li>
+                            <li>流控制语句：for-in/with(strict模式下会报错，不建议使用)/if/switch/do-while/while/for/break/continue/label</li>
+                            <li>返回值问题：;/var a=b/function a() {}/break/continue/label无返回值</li>
+                        </ol>
+                    </li>
+                    <li>JavaScript的函数
+                        <ol>
+                            <li>ECMAScript中的参数都是值传递</li>
+                            <li>无函数重载</li>
+                        </ol>
+                    </li>
+                    <li>eval()：对字符串表达式进行求值。
+                        <div class="shili">
+                            <form>
+                                <input id="bds" type="text">=<input id="jg" type="text"><br>
+                                <input type="button" value="计算" onclick="js()">
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <hr>
 
 
-        
+
+
+
+
+
+
+            
+    
 
 
 
