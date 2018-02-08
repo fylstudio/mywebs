@@ -145,9 +145,9 @@ table tr td{
     padding:10px;
 }
 #float_left{
-    width:100px;
+    width:80px;
     position:fixed;
-    top:35%;
+    top:25%;
     right:3px;
 }
 #float_left ul{

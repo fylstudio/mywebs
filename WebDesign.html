@@ -42,10 +42,13 @@
 
     <div id="float_left">
         <ul>
-            <li><a href="#top" title="页面顶端"><div>︽</div></a></li>
-            <li><div><a href="javascript:changestylegreen();" title="主题变为绿色">STYLE_GREEN</a></div></li>
-            <li><div><a href="http://www.fylstudio.com" target="_blank" title="FYLSTUDIO">FYLSTUDIO</a></div></li>
-            <li><div><a href="javascript:changestyleblue();" title="主题变为蓝色">STYLE_BLUE</a></div></li>
+            <li><a href="#" title="页面顶端"><div>︽</div></a></li>
+            <li><a href="javascript:changestylegreen();" title="主题变为绿色"><div>GREEN</div></a></li>
+            <li><a href="http://www.fylstudio.com" target="_blank" title="FYLSTUDIO"><div>FYLSTUDIO</div></a></li>
+            <li><a href="#html5" title="HTML5"><div>HTML5</div></a></li>
+            <li><a href="#css3" title="CSS3"><div>CSS3</div></a></li>
+            <li><a href="#js" title="JavaScript"><div>JavaScript</div></a></li>
+            <li><a href="javascript:changestyleblue();" title="主题变为蓝色"><div>BLUE</div></a></li>
             <li><a href="#this_bottom" title="页面底端"><div>︾</div></a></li>
         </ul>
     </div>
@@ -62,7 +65,7 @@
         
         <article>
 
-            <h2>第一部分：HTML5</h2>
+            <h2 id="html5">第一部分：HTML5</h2>
 
             <section>
                 <h3>1、HTML5简介</h3>
@@ -679,7 +682,7 @@
                 </aside>
             </section>
 
-            <h2>第二部分：CSS3</h2>
+            <h2 id="css3">第二部分：CSS3</h2>
 
             <section>
                     <h3>1、CSS的使用方式</h3>
@@ -1221,7 +1224,7 @@
             </section>
 
 
-            <h2>第三部分：JavaScript</h2>
+            <h2 id="js">第三部分：JavaScript</h2>
             <section>
                 <h3>1、JavaScript简介</h3>
                 <ul>
@@ -1300,20 +1303,141 @@
                             </form>
                         </div>
                     </li>
+                    <li>JavaScript的引用类型
+                        <ol>
+                            <li>Object:经常使用对象来承载可选参数，用命名的形式参数来传递必要的参数。
+                                <ul>
+                                    <li>{ }等价于new Object()</li>
+                                    <li>a.b等价于a['b']</li>
+                                </ul>
+                            </li>
+                            <li>Array:[ ]等价于new Array()</li>
+                            <li>Date和正则表达式</li>
+                            <li>Function</li>
+                        </ol>
+                    </li>
+                    <li>闭包：有权访问另一个函数中变量的函数。</li>
                 </ul>
             </section>
             <hr>
 
+            <section>
+                <h3>2、DOM</h3>
+                <ul>
+                    <li>节点层级:
+                        <ol>
+                            <li>Document节点</li>
+                            <li>元素节点</li>
+                            <li>文本节点</li>
+                        </ol>
+                    </li>
+                    <li>节点类型：
+                        <ol>
+                            <li>ELEMENT_NODE</li>
+                            <li>ATTRIBUTE_NODE</li>
+                            <li>TEXT_NODE</li>
+                            <li>CDATA_SECTION_NODE</li>
+                            <li>ENTITY_REFERENCE_NODE</li>
+                            <li>ENTITY_NODE</li>
+                            <li>PROCESSING_INSTRUCTION_NODE</li>
+                            <li>COMMENT_NODE</li>
+                            <li>DOCUMENT_NODE</li>
+                            <li>DOCUMENT_TYPE_NODE</li>
+                            <li>DOCUMENT_FRAGMENT_NODE</li>
+                            <li>NOTATION_NODE</li>
+                        </ol>
+                    </li>
+                    <li>节点关系：
+                        <ol>
+                            <li>父子关系：parentNode/firstChild/lastChild/childNodes</li>
+                            <li>兄弟关系：previousSibling/nextSibling</li>
+                        </ol>
+                    </li>
+                    <li>Document节点：
+                        <ol>
+                            <li>document.title：标题</li>
+                            <li>document.referrer：文档来源（从什么页面跳转到当前页面？）</li>
+                            <li>document.domain：返回下载当前文档的服务器域名</li>
+                        </ol>
+                    </li>
+                    <li>DOM操作：
+                        <ol>
+                            <li>创建：document.createElement("div")</li>
+                            <li>添加：someNode.appendChild(newNode)</li>
+                            <li>插入成为最后一个节点：someNode.insertBefore(newNode,null)</li>
+                            <li>插入成为第一个节点：someNode.insertBefore(newNode,someNode.firstChild)</li>
+                            <li>插入到最后一个节点的前面：someNode.insertBefore(newNode,someNode.lastChild)</li>
+                            <li>替换第一个子节点：someNode.replaceChild(newNode,someNode.firstChild)</li>
+                            <li>替换最后一个子节点：someNode.replaceChild(newNode,someNode.lastChild)</li>
+                            <li>移除第一个子节点：someNode.removeChild(someNode.firstChild)</li>
+                            <li>移除最后一个子节点：someNode.removeChild(someNode.lastChild)</li>
+                            <li>深克隆：var deepList=myList.cloneNode(true)</li>
+                            <li>浅克隆：var shallowList=myList.cloneNode(false)</li>
+                        </ol>
+                    </li>
+                    <li>DOM查找：
+                        <ol>
+                            <li>document.getElementByid</li>
+                            <li>document.getElementsByTagName</li>
+                            <li>document.anchors</li>
+                            <li>document.forms</li>
+                            <li>document.images</li>
+                            <li>document.links</li>
+                            <li>document.querySelector("body")</li>
+                            <li>document.querySelectorAll(".selected")</li>
+                        </ol>
+                    </li>
+                    <li>元素大小：
+                        <p>
+                            <img src="images/elementsize01.png" width="400px" height="300px">
+                            <img src="images/elementsize02.png" width="400px" height="300px">
+                            <img src="images/elementsize03.png" width="400px" height="300px">
+                        </p>
+                    </li>
+                    <li>
+                        图片的懒加载：元素的offsetTop&lt;页面的scrollTop+页面的clientHeight
+                    </li>
+                </ul>
+            </section>
+            <hr>
 
-
-
-
-
-
-
-            
-    
-
+            <section>
+                <h3>3、事件</h3>
+                <ul>
+                    <li>事件流：
+                        <ol>
+                            <li>捕获</li>
+                            <li>冒泡</li>
+                        </ol>
+                    </li>
+                    <li>事件处理：
+                        <ol>
+                            <li>HTML</li>
+                            <li>DOM0</li>
+                            <li>DOM2</li>
+                            <li>IE</li>
+                        </ol>
+                    </li>
+                    <li>事件对象：
+                        <ol>
+                            <li>target</li>
+                            <li>type</li>
+                            <li>preventDefault</li>
+                            <li>stopPropagation</li>
+                            <li>eventPhase</li>
+                        </ol>
+                    </li>
+                    <li>事件类型：
+                        <ol>
+                            <li>PC</li>
+                            <li>移动设备</li>
+                            <li>自定义</li>
+                        </ol>
+                    </li>
+                    <li>事件代理/事件委托
+                </ul>
+            </section>
+            <hr>
 
 
             
